@@ -9,6 +9,7 @@ export default class Cl_vEmpleadoBootstrap implements I_vEmpleado {
   inCedula: HTMLInputElement;
   inSueldoActual: HTMLInputElement;
   inAniosTrabajando: HTMLInputElement;
+  inNumeroHijos: HTMLInputElement;
   private modal: any;
 
   constructor() {
@@ -24,6 +25,9 @@ export default class Cl_vEmpleadoBootstrap implements I_vEmpleado {
     ) as HTMLInputElement;
     this.inAniosTrabajando = document.getElementById(
       "empleado_inAniosTrabajando",
+    ) as HTMLInputElement;
+    this.inNumeroHijos = document.getElementById(
+      "empleado_inNumeroHijos",
     ) as HTMLInputElement;
     this.btCancelar = document.getElementById(
       "empleado_btCancelar",
@@ -46,6 +50,9 @@ export default class Cl_vEmpleadoBootstrap implements I_vEmpleado {
   get aniosTrabajando(): number {
     return this.inAniosTrabajando ? +this.inAniosTrabajando.value : 0;
   }
+  get numeroHijos(): number {
+    return this.inNumeroHijos ? +this.inNumeroHijos.value : 0;
+  }
   onAceptar(callback: () => void): void {
     this.btAceptar.onclick = callback;
   }
@@ -57,6 +64,7 @@ export default class Cl_vEmpleadoBootstrap implements I_vEmpleado {
     this.inCedula.value = "";
     this.inSueldoActual.value = "";
     this.inAniosTrabajando.value = "";
+    this.inNumeroHijos.value = "";
     this.modal.show();
   }
   ocultar(): void {

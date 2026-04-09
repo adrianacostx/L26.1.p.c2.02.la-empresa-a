@@ -6,6 +6,7 @@ export default class Cl_vEmpleadoBootstrap {
     inCedula;
     inSueldoActual;
     inAniosTrabajando;
+    inNumeroHijos;
     modal;
     constructor() {
         this.vista = document.getElementById("empleado");
@@ -13,6 +14,7 @@ export default class Cl_vEmpleadoBootstrap {
         this.inCedula = document.getElementById("empleado_inCedula");
         this.inSueldoActual = document.getElementById("empleado_inSueldoActual");
         this.inAniosTrabajando = document.getElementById("empleado_inAniosTrabajando");
+        this.inNumeroHijos = document.getElementById("empleado_inNumeroHijos");
         this.btCancelar = document.getElementById("empleado_btCancelar");
         this.btAceptar = document.getElementById("empleado_btAceptar");
         const elementoModal = document.getElementById("empleado");
@@ -30,6 +32,9 @@ export default class Cl_vEmpleadoBootstrap {
     get aniosTrabajando() {
         return this.inAniosTrabajando ? +this.inAniosTrabajando.value : 0;
     }
+    get numeroHijos() {
+        return this.inNumeroHijos ? +this.inNumeroHijos.value : 0;
+    }
     onAceptar(callback) {
         this.btAceptar.onclick = callback;
     }
@@ -41,6 +46,7 @@ export default class Cl_vEmpleadoBootstrap {
         this.inCedula.value = "";
         this.inSueldoActual.value = "";
         this.inAniosTrabajando.value = "";
+        this.inNumeroHijos.value = "";
         this.modal.show();
     }
     ocultar() {

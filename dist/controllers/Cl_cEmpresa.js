@@ -8,7 +8,7 @@
  * Se desea conocer:
  * - El nombre del empleado que recibirá el mayor aumento.
  * - El total de la nómina nueva.
- *
+ * - Si el empleado tiene hijos recibe un aumento del 5% sobre el sueldo actual
  * Considere que la clase empleado hereda de una clase persona
  */
 import Cl_mEmpresa from "../models/Cl_mEmpresa.js";

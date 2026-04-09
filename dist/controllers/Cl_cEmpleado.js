@@ -23,6 +23,7 @@ export default class Cl_cEmpleado {
             cedula: this.vista.cedula,
             sueldoActual: this.vista.sueldoActual,
             aniosTrabajando: this.vista.aniosTrabajando,
+            numeroHijos: this.vista.numeroHijos,
         }));
         this.vista.ocultar();
     }
